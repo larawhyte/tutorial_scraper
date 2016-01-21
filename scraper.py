@@ -15,7 +15,7 @@ root = lxml.html.fromstring(html)
 tds=root.cssselect('td')
 
 for td in tds:
-  record={"cell":td.text}
+  record = {"cell":td.text}
   print record
   scraperwiki.sqlite.save([“cell”],record)
 # # Write out to the sqlite database using scraperwiki library
