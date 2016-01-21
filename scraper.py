@@ -13,6 +13,7 @@ html = scraperwiki.scrape("http://uk.soccerway.com/teams/netherlands/fortuna-sit
 root = lxml.html.fromstring(html)
 #drill into the specific table you are looking for - the <td> data - this can change depending on what you want to look for
 tds=root.cssselect('td')
+print tds 
 #
 # # Write out to the sqlite database using scraperwiki library
 # scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation": "software developer"})
