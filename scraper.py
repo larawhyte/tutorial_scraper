@@ -5,14 +5,15 @@ import scraperwiki
 import lxml.html
 
 
-# # Read in a page
+# # Read in a page - creates the first variable
 html = scraperwiki.scrape("http://uk.soccerway.com/teams/netherlands/fortuna-sittard/")
 #
 # # Find something on the page using css selectors
 
 root = lxml.html.fromstring(html)
-#drill into the specific table you are looking for - the <td> data - this can change depending on what you want to look for
+#drill into the specific table you are looking to create another variable- the <td> data - this can change depending on what you want to look for
 tds=root.cssselect('td')
+#
 indexno=0
 for td in tds:
   indexno=indexno+1
