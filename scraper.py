@@ -13,7 +13,7 @@ html = scraperwiki.scrape("http://uk.soccerway.com/teams/netherlands/fortuna-sit
 root = lxml.html.fromstring(html)
 #drill into the specific table you are looking for - the <td> data - this can change depending on what you want to look for
 tds=root.cssselect('td')
-
+indexno=0
 for td in tds:
   indexno=indexno+1
   record={"td":td.text,"index":indexno}
